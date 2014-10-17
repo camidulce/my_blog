@@ -1,0 +1,11 @@
+<ul>
+    <% @posts_results.each do |post| %>
+  <li><%= link_to post.subject,
+    :action => 'show', :id => post.id  %></li>
+  <% end %>
+</ul>
+
+<div id="search_results">
+    <%= render :partial => 'posts/search_results' %>
+</div>
+

@@ -1,0 +1,7 @@
+
+
+<%= form_tag :controller => 'posts', :action => 'search_results', :method => 'get' do %>
+  <%= text_field_tag :search, params[:search], :id => 'search_field' %>
+  <%= submit_tag "Search", :name => nil %>
+
+<% end %>
