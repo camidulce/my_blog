@@ -2,19 +2,41 @@
 <html>
 <head>
   <title>MyBlog</title>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div class ="welcome">
-  <div id="search">
-      <%= render :partial => 'posts/search' %>
+<div class ="wrap">
+
+  <div class= "welcome"
+        <div ID="logo"> <h1>CAMIdulce's blog</h1></div>
+
+    <div class="search">
+      <div id="left">
+        <%= render :partial => 'posts/search' %>
+      </div>
+
+      <div id="right">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Posts', posts_path %>
+      </div>
+    </div>
   </div>
+
+  <div class ='wrap_below'>
+
+    <div id='move_inside'>
+
+    <%= yield %>
+
+    </div>
+
+  </div>
+
+
 </div>
-
-<%= yield %>
-
 </body>
 </html>

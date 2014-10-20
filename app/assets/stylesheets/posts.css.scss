@@ -1,3 +1,37 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrap_below{
+  background-color: lightgrey;
+  width: 880px;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  min-height: 200px;
+
+}
+
+#move_inside_posts{
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.posts_table {
+  margin:0px;
+  padding:0px;
+  width:96%;
+  box-shadow: 10px 10px 5px #888888;
+  border:1px solid #e5e5e5;
+
+}
+
+.th {
+text-align: left;
+}
+
+.td {
+text-align: left;}
+
+

@@ -13,10 +13,87 @@
  *= require_tree .
  *= require_self
  */
+.wrap{
+  background-color: lightblue;
+  width: 880px;
+  margin: 0 auto;
+  padding-top: 30px;
+  min-height: 200px;
+  border-radius: 5px
+}
+
 
 .welcome{
   background: grey;
+  font-family: 'Montserrat Alternates', sans-serif;
+  width: 800px;
+  font-size: 700;
   margin: 0 auto;
-  font-family: arial;
-  font-size: 40;
+  padding-top: 20px;
+  height: 150px;
+  border-radius: 5px;
 }
+
+.search{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 700;
+  margin: 0 auto;
+  padding-top: 3px;
+}
+
+#left{
+  float: left;
+  width: 65%;
+  overflow:hidden;
+  padding-left: 30px;
+}
+
+#right{
+  overflow: hidden;
+  text-align: right;
+  padding-right: 40px;
+  font-color: white;
+}
+
+#logo{
+  margin: 0 auto;
+  font-size: 40px;
+  padding-left: 20px;
+}
+
+.wrap_below{
+  background-color: lightgrey;
+  width: 880px;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  min-height: 350px;
+
+}
+
+#move_inside{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#move_inside_posts{
+  padding-left: 30px;
+  padding-right: 0px;
+
+}
+
+#left_home{
+  float: left;
+  width: 65%;
+  overflow:hidden;
+  padding-left: 35px;
+}
+
+#right_home{
+  overflow: hidden;
+  text-align: right;
+  padding-right: 40px;
+  vertical-align: middle;
+}
+
+.span{vertical-align: middle;}
