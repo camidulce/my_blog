@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     post 'search_results', on: :collection
   end
 
+  resources :users do
+    get '/signup', to: 'users#new'
+  end
 
 
   #get 'drafts', to: 'posts#drafts'
