@@ -39,14 +39,15 @@ feature "Manage Posts" do
     end
 
   scenario "Edit a particular post, be redirected and see the updated post on the index page" do
+      meetup = create_meetup
+      visit edit_post_path(meetup)
 
-      visit edit_post_path
 
-      fill_in 'Subject', with: 'RailsGirls'
-      fill_in 'Body', with: 'GitHub Intro'
-      click_on 'submit'
-
-      expect(current_path).to eq(post_path(post))
+      fill_in 'Subject', with: 'RailsBoys'
+      fill_in 'Body', with: 'GitHub Adv'
+      click_on 'Update Post'
+      #update #show page
+      expect(current_path).to eq(post_path(meetup))
       # expect(page.find('.subject')).to have_content(/RailsGirls/)
       # expect(page.find('.body')).to have_content(/GitHub Intro/)
     end
