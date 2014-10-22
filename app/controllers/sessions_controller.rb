@@ -1,12 +1,22 @@
-# class SessionsController < ApplicationController
+class SessionsController < ApplicationController
 
-#   def new
-#   end
+  def new
+  end
 
-#   def create
-#   end
+  def create
+    #Find user by their email
+    user = User.find_by(email: params[:session][:email].downcase)
 
-#   def destroy
-#   end
+    #Test if tge user was found AND authenticates
+    if user && user.authenticate(params[:session][:password])
+      #TODO Sign In the User
+    else
+      flash[:error] = "Invalid email/password"
+      redirect_to new_sessions_path
+    end
+  end
 
-# end
+  def destroy
+  end
+
+end

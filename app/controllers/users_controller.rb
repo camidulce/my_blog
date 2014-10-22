@@ -16,8 +16,9 @@ class UsersController < ApplicationController
       render :new    #rails will look in views folder for new.html.erb
     end
   end
-
+  #/users/7
   def show
+    @user = User.find(params[:id])
   end
 
   def edit

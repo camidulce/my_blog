@@ -14,6 +14,11 @@ Rails.application.routes.draw do
     get '/signup', to: 'users#new'
   end
 
+  resources :sessions, only: [:new, :create] do
+    get '/signin', to: 'sessions#new'
+    delete '/signout', to: 'sessions#destroy'
+  end
+
 
   #get 'drafts', to: 'posts#drafts'
 

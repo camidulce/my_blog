@@ -2,8 +2,15 @@ require 'rails_helper'
 
 def create_meetup
   Post.create!(
-    subject: 'RailsGirls',
-    body: 'GitHub Intro',
+    subject: 'Test',
+    body: 'Post',
+  )
+end
+
+def create_post
+  Post.create!(
+    subject: 'aaa',
+    body: 'bbb',
   )
 end
 
@@ -42,25 +49,21 @@ feature "Manage Posts" do
       meetup = create_meetup
       visit edit_post_path(meetup)
 
-
       fill_in 'Subject', with: 'RailsBoys'
       fill_in 'Body', with: 'GitHub Adv'
       click_on 'Update Post'
       #update #show page
       expect(current_path).to eq(post_path(meetup))
-      # expect(page.find('.subject')).to have_content(/RailsGirls/)
-      # expect(page.find('.body')).to have_content(/GitHub Intro/)
+
     end
 
+  scenario "Delete a post and redirect to welcome" do
+    post = create_post
 
-
-  # scenario "Delete a post redirect to welcome" do
-  #   post = create_post
-
-  #   visit post_path(post)
-  #   click_on 'Destroy'
-  #   expect(current_path).to eq(posts_path)
-  #   expect(post_path).to_not have_content(/Test Post/)
-  #   end
+    visit post_path(post)
+    click_on 'Destroy'
+    expect(current_path).to eq(posts_path)
+    expect(post_path).to_not have_content(/Test Post/)
+    end
 
 end
