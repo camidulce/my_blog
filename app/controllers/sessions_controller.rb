@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
     #Test if tge user was found AND authenticates
     if user && user.authenticate(params[:session][:password])
+      redirect_to root_url, notice: "Logged in!"
       #TODO Sign In the User
     else
       flash[:error] = "Invalid email/password"
