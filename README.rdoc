@@ -1,5 +1,4 @@
 MY BLOG
-=======
 
 This was one of the first GA class projects: to build a Ruby on Rails app which has the basic functionality
 of a blog: you can add/show/edit/destroy a post and search posts.
